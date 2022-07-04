@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\auth\PatientAuthController;
 use App\Http\Controllers\frontend\frontendcontroller;
 
 /**
@@ -14,6 +15,7 @@ Route::get('/login-page', [ frontendcontroller::class, 'ShowLoginPage' ]) -> nam
  */
 Route::get('/patient-register', [ frontendcontroller::class, 'PatientRegPage' ]) -> name('patient.reg.page');
 Route::get('/patient-deshboard', [ frontendcontroller::class, 'PatientDeshPage' ]) -> name('patient.desh.page');
+Route::post('/patient-register', [ PatientAuthController::class, 'Register' ]) -> name('patient.reg');
 /**
  * Doctor Register / Deshboard Routes
  */

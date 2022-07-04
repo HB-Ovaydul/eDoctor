@@ -9,7 +9,7 @@
 								<span></span>
 							</span>
 						</a>
-						<a href="index-2.html" class="navbar-brand logo">
+						<a href="{{ route('home.page') }}" class="navbar-brand logo">
 							<img src="frontend/assets/img/logo.png" class="img-fluid" alt="Logo">
 						</a>
 					</div>

@@ -19,18 +19,27 @@
 										</div>
 										
 										<!-- Register Form -->
-										<form action="https://dreamguys.co.in/demo/doccure/doctor-dashboard.html">
+										<form action="{{ route('patient.reg') }}" method="POST">
+											@csrf
 											<div class="form-group form-focus">
 												<input type="text" class="form-control floating">
 												<label class="focus-label">Name</label>
 											</div>
 											<div class="form-group form-focus">
-												<input type="text" class="form-control floating">
-												<label class="focus-label">Mobile Number</label>
+												<input name="email" type="text" class="form-control floating">
+												<label class="focus-label">Email</label>
 											</div>
 											<div class="form-group form-focus">
-												<input type="password" class="form-control floating">
+												<input name="mobile" type="text" class="form-control floating">
+												<label class="focus-label">Mobil</label>
+											</div>
+											<div class="form-group form-focus">
+												<input name="password" type="password" class="form-control floating">
 												<label class="focus-label">Create Password</label>
+											</div>
+											<div class="form-group form-focus">
+												<input name="password_confirmation" type="password" class="form-control floating">
+												<label class="focus-label">Confirm Password</label>
 											</div>
 											<div class="text-right">
 												<a class="forgot-link" href="{{ route('login.page') }}">Already have an account?</a>
