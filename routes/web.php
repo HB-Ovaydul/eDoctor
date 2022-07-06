@@ -16,6 +16,7 @@ Route::get('/login-page', [ frontendcontroller::class, 'ShowLoginPage' ]) -> nam
 Route::get('/patient-register', [ frontendcontroller::class, 'PatientRegPage' ]) -> name('patient.reg.page');
 Route::get('/patient-deshboard', [ frontendcontroller::class, 'PatientDeshPage' ]) -> name('patient.desh.page');
 Route::post('/patient-register', [ PatientAuthController::class, 'Register' ]) -> name('patient.reg');
+Route::post('/patient-login', [ PatientAuthController::class, 'Login' ]) -> name('patient.login');
 /**
  * Doctor Register / Deshboard Routes
  */

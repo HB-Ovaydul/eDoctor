@@ -17,20 +17,21 @@
 										<div class="login-header">
 											<h3>Patient Register <a href="{{ route('doctor.reg.page') }}">Are you a Doctor?</a></h3>
 										</div>
-										
+
+										@include('frontend.validate')
 										<!-- Register Form -->
 										<form action="{{ route('patient.reg') }}" method="POST">
 											@csrf
 											<div class="form-group form-focus">
-												<input type="text" class="form-control floating">
+												<input name="name" type="text" class="form-control floating" value="{{ old('name') }}">
 												<label class="focus-label">Name</label>
 											</div>
 											<div class="form-group form-focus">
-												<input name="email" type="text" class="form-control floating">
+												<input name="email" type="text" class="form-control floating" value="{{ old('email') }}">
 												<label class="focus-label">Email</label>
 											</div>
 											<div class="form-group form-focus">
-												<input name="mobile" type="text" class="form-control floating">
+												<input name="mobile" type="text" class="form-control floating" value="{{ old('mobile') }}">
 												<label class="focus-label">Mobil</label>
 											</div>
 											<div class="form-group form-focus">
