@@ -77,7 +77,7 @@
 												</a>
 											</li>
 											<li>
-												<a href="{{ route('login.page') }}">
+												<a href="{{ route('patient.logout') }}">
 													<i class="fas fa-sign-out-alt"></i>
 													<span>Logout</span>
 												</a>

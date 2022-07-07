@@ -14,9 +14,10 @@ Route::get('/login-page', [ frontendcontroller::class, 'ShowLoginPage' ]) -> nam
  * Patient Register / Deshboard Routes
  */
 Route::get('/patient-register', [ frontendcontroller::class, 'PatientRegPage' ]) -> name('patient.reg.page');
-Route::get('/patient-deshboard', [ frontendcontroller::class, 'PatientDeshPage' ]) -> name('patient.desh.page');
+Route::get('/patient-deshboard', [ frontendcontroller::class, 'PatientDeshPage' ]) -> name('patient.desh.page') -> middleware('admin');
 Route::post('/patient-register', [ PatientAuthController::class, 'Register' ]) -> name('patient.reg');
 Route::post('/patient-login', [ PatientAuthController::class, 'Login' ]) -> name('patient.login');
+Route::get('/patient-logout', [ PatientAuthController::class, 'Logout' ]) -> name('patient.logout');
 /**
  * Doctor Register / Deshboard Routes
  */
