@@ -100,7 +100,7 @@
 												</a>
 											</li>
 											<li>
-												<a href="doctor-change-password.html">
+												<a href="{{ route('patient.password') }}">
 													<i class="fas fa-lock"></i>
 													<span>Change Password</span>
 												</a>

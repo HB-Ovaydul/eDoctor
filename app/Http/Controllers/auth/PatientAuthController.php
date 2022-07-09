@@ -21,14 +21,14 @@ class PatientAuthController extends Controller
     ]);
       // Data Create
 
-     $patient = patient::create([
+      patient::create([
         'name'          => $request -> name,
         'email'         => $request -> email,
         'mobile'        => $request -> mobile,
         'password'      => password_hash($request -> password , PASSWORD_DEFAULT),
       ]);
 
-      return redirect() -> route('patient.reg.page') -> with('success','Assalamuaikum' .' '. $patient -> name .'Your Account Created Successful! Please Now login.' );
+      return redirect() -> route('patient.reg.page') -> with('success','Your Account Created Successful! Please Now login.' );
   }
     // Patient Login
   public function Login(Request $request)
@@ -55,5 +55,7 @@ class PatientAuthController extends Controller
       Auth::guard('patient') -> logout();
       return redirect() -> route('login.page');
    }
+
+
 
 }

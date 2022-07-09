@@ -41,7 +41,6 @@ class frontendcontroller extends Controller
        {
          return view('frontend.patient.deshboard');
        }
-
              
       /**
        * Doctor Register Page
@@ -59,5 +58,7 @@ class frontendcontroller extends Controller
       {
         return view('frontend.doctor.deshboard');
       }
+
+
 
 }
